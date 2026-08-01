@@ -153,7 +153,7 @@ function App() {
     // API Call to Python Backend: GET /api/weather-files
     const fetchFiles = async () => {
         try {
-            const res = await fetch('/api/weather-files');
+            const res = await fetch('/api/list-weather-files');
             const data = await res.json();
             if (!res.ok) throw new Error(data.detail || "Failed to load files");
             setFiles(data.files || []);
