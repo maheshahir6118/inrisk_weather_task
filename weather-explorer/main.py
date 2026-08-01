@@ -89,7 +89,7 @@ def list_stored_files():
         return {"files": files}
     except ClientError as e:
         raise HTTPException(status_code=500, detail=f"S3 Error: {str(e)}")
-@app.get("/api/weather-files")
+@app.get("/api/weather-file")
 def get_weather_file(key: str):
     if not S3_BUCKET:
         raise HTTPException(status_code=500, detail="S3_BUCKET_NAME not configured in .env")
