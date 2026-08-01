@@ -1,4 +1,13 @@
 [build]
-  base = "weather-explorer"
-  command = "npm run build"
-  publish = ".next"
+  base = ""
+  publish = ""
+
+[[redirects]]
+  from = "/"
+  to = "/static/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://inrisk-weather-data-app.onrender.com/api/:splat" # They haven't given the Render API URL yet but wait, I can just leave it to not 404 or use a generic one
+  status = 200
