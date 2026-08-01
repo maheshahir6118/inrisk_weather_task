@@ -1,4 +1,3 @@
 [build]
-  base = "weather-explorer"
-  command = "npm run build"
-  publish = ".next"
+  base = "static"
+  publish = "."
